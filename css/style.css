@@ -136,12 +136,26 @@ h2:hover::after {
 }
 
 .about-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-top: 15px;
 }
 
-.about-links a {
-    margin-right: 15px;
-    font-size: 1em;
+.about-links .btn {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about-links .btn {
+        width: auto;
+    }
 }
 
 footer {
