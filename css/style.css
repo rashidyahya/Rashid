@@ -191,8 +191,6 @@ footer {
 
 .toggle-mode {
     position: fixed;
-    top: 20px;
-    right: 20px;
     background-color: var(--accent-color);
     border: none;
     padding: 10px;
@@ -205,13 +203,59 @@ footer {
     width: 50px;
     height: 50px;
     z-index: 1000;
-  }
-  
-  .toggle-mode i {
+}
+
+.toggle-mode {
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-language {
+    top: 20px;
+    left: 20px;
+}
+
+.toggle-mode i{
     font-size: 1.5em;
     color: white;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+}
+
+.toggle-language {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    font-size: 1.5em;
+    color: white;
+}
+
+.toggle-language .en {
+    display: block;
+}
+
+.toggle-language .ar {
+    display: none;
+}
+
+.toggle-language.arabic .en {
+    display: none;
+}
+
+.toggle-language.arabic .ar {
+    display: block;
+}
   
   .toggle-mode .fa-sun {
     opacity: 0;
@@ -227,7 +271,16 @@ footer {
     opacity: 1;
     transform: scale(1);
   }
-  
+
+  .toggle-language.arabic .fa-language {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.toggle-language.arabic .fa-globe {
+    opacity: 1;
+    transform: scale(1);
+}
 .edu-logo, .experience-logo {
     width: 60px;
     height: 60px;
@@ -312,4 +365,14 @@ footer {
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: var(--text-color); }
+}
+
+.arabic-content {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Roboto', sans-serif; /* Ensure the font supports Arabic characters */
+}
+
+.arabic-content h1, .arabic-content h2, .arabic-content h3, .arabic-content p, .arabic-content ul, .arabic-content li {
+    text-align: right;
 }
