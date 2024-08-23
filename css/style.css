@@ -22,7 +22,7 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 16px;
 }
 
@@ -294,4 +294,22 @@ footer {
 
 .dark-mode .project h3 {
     color: var(--accent-color);
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid var(--text-color);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--text-color); }
 }
